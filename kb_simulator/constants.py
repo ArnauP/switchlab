@@ -9,4 +9,6 @@ SWITCHES = {
 SWITCH_HEIGHT = 200
 SWITCH_WIDTH = 200
 
-SWITCH_SFX_PATH = 'kb_simulator/resources/switches/'
+PATH_SWITCH_SFX = 'kb_simulator/resources/switches/'
+PATH_ICON = 'kb_simulator/resources/icons/app_icon.png'
+PATH_STYLE = 'kb_simulator/resources/style/style.css'

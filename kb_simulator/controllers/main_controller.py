@@ -2,7 +2,7 @@ from PyQt5.QtCore import pyqtSignal, QObject
 from pynput.keyboard import Key, Listener
 from ..views.main_view import MainView
 from ..utils.utils import *
-from .constants import *
+from ..constants import *
 
 
 class MainController(QObject):
