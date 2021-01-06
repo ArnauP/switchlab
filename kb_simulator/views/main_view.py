@@ -75,7 +75,7 @@ class MainView(QMainWindow):
         event.ignore()
         self.hide()
         self.tray_icon.showMessage(
-            "Tray Program",
+            "KB Switch Simulator",
             "Application was minimized to Tray",
             QSystemTrayIcon.Information,
             2000
