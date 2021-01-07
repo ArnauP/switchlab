@@ -10,7 +10,8 @@ python_version = "3.6.5"
 numpy = "==1.17.2"
 "pyqt5" = "==5.11.2"
 pynput = "*"
-playsound = "*"
+pygame = "*"
+sip = "*"
 
 [dev-packages]
 pyinstaller = "==3.4"

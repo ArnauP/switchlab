@@ -32,7 +32,6 @@ class MainView(QMainWindow):
             PATH_SWITCH_SFX,
             SWITCHES[self.switch_selector.itemText(0)]
             ))
-        print(img_path, os.path.isfile(img_path))
         self.img_container = QLabel(self.main_widget)
         img = QPixmap(img_path)
         self.img_container.setPixmap(img.scaled(QSize(SWITCH_HEIGHT, SWITCH_WIDTH)))
