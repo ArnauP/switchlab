@@ -29,7 +29,7 @@ class MainView(QMainWindow):
             self.switch_selector.addItem(switch_name)
         
         img_path = get_path('{}{}.png'.format(
-            PATH_SWITCH_SFX,
+            PATH_SWITCH_IMG,
             SWITCHES[self.switch_selector.itemText(0)]
             ))
         self.img_container = QLabel(self.main_widget)
@@ -83,7 +83,7 @@ class MainView(QMainWindow):
     def selection_change(self, index):
         new_switch_name = self.switch_selector.itemText(index)
         img_path = get_path('{}{}.png'.format(
-            PATH_SWITCH_SFX,
+            PATH_SWITCH_IMG,
             SWITCHES[new_switch_name]
             ))
         img = QPixmap(img_path)

@@ -1,8 +1,11 @@
 from PyQt5.QtCore import pyqtSignal, QObject
+from PyQt5.QtMultimedia import QSound
 from pynput.keyboard import Key, Listener
 from ..views.main_view import MainView
 from ..utils.utils import *
 from ..constants import *
+from threading import Thread
+from pygame import mixer
 
 
 class MainController(QObject):
@@ -12,8 +15,18 @@ class MainController(QObject):
         self.switch_selected = None
         self.__key_pressed = False
         self.__view = MainView(self)
+        self.init_mixer()
         self.start_listener()
     
+    def init_mixer(self):
+        self.__mixer = mixer
+        self.__mixer.init()
+
+    def play_sfx(self, switch_id, key_type, key_action):
+        sound_path = get_path('{}{}/{}_{}.mp3'.format(PATH_SWITCH_SFX, switch_id, key_type, key_action))
+        self.__mixer.music.load(sound_path)
+        self.__mixer.music.play()
+
     def change_switch_selected(self, switch_id):
         self.switch_selected = switch_id
     
@@ -29,13 +42,13 @@ class MainController(QObject):
     
     def get_key_type(self, key):
         if key == Key.space:
-            key = 'space'
+            key = FILE_NAME_SPACE
         elif key == Key.enter:
-            key = 'enter'
+            key = FILE_NAME_ENTER
         elif key == Key.backspace or key == Key.tab:
-            key = 'backspace'
+            key = FILE_NAME_BACKSPACE
         else:
-            key = 'normal'
+            key = FILE_NAME_ALPHANUMERIC
         return key
 
     def on_press(self, key):
@@ -43,13 +56,11 @@ class MainController(QObject):
             return
         self.__key_pressed = key
         key_type = self.get_key_type(key)
-        audio_path = 'kb_simulator/resources/sfx/{}/{}_press.mp3'.format(self.switch_selected, key_type)
-        play_audio_thread = PlaySoundThread(audio_path)
+        play_audio_thread = Thread(target=lambda: self.play_sfx(self.switch_selected, key_type, 'press'))
         play_audio_thread.start()
 
     def on_release(self, key):
         self.__key_pressed = None
         key_type = self.get_key_type(key)
-        audio_path = 'kb_simulator/resources/sfx/{}/{}_release.mp3'.format(self.switch_selected, key_type)
-        play_audio_thread = PlaySoundThread(audio_path)
+        play_audio_thread = Thread(target=lambda: self.play_sfx(self.switch_selected, key_type, 'release'))
         play_audio_thread.start()
