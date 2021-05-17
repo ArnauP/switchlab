@@ -1,28 +1,34 @@
+from PyQt5.QtCore import pyqtSignal, QObject
+from PyQt5.QtMultimedia import QSound
 from pynput.keyboard import Key, Listener
-from PyQt5.QtCore import QObject
-from playsound import playsound
-from threading import Thread
-
-from ..utils.utils import *
 from ..views.main_view import MainView
+from ..utils.utils import *
 from ..constants import *
+from threading import Thread
+from pygame import mixer
 
 
 class MainController(QObject):
 
     def __init__(self):
         QObject.__init__(self)
-        self.__switch_selected = None
+        self.switch_selected = None
         self.__key_pressed = False
         self.__view = MainView(self)
+        self.init_mixer()
         self.start_listener()
+    
+    def init_mixer(self):
+        self.__mixer = mixer
+        self.__mixer.init()
 
     def play_sfx(self, switch_id, key_type, key_action):
-        sound_path = get_path('{}{}/{}_{}.wav'.format(PATH_SWITCH_SFX, switch_id, key_type, key_action))
-        playsound(sound_path)
+        sound_path = get_path('{}{}/{}_{}.mp3'.format(PATH_SWITCH_SFX, switch_id, key_type, key_action))
+        self.__mixer.music.load(sound_path)
+        self.__mixer.music.play()
 
     def change_switch_selected(self, switch_id):
-        self.__switch_selected = switch_id
+        self.switch_selected = switch_id
     
     def stop_listener(self):
         try:
@@ -50,19 +56,11 @@ class MainController(QObject):
             return
         self.__key_pressed = key
         key_type = self.get_key_type(key)
-        play_audio_thread = Thread(target=lambda: self.play_sfx(self.__switch_selected, key_type, 'press'))
+        play_audio_thread = Thread(target=lambda: self.play_sfx(self.switch_selected, key_type, 'press'))
         play_audio_thread.start()
 
     def on_release(self, key):
         self.__key_pressed = None
         key_type = self.get_key_type(key)
-        play_audio_thread = Thread(target=lambda: self.play_sfx(self.__switch_selected, key_type, 'release'))
+        play_audio_thread = Thread(target=lambda: self.play_sfx(self.switch_selected, key_type, 'release'))
         play_audio_thread.start()
-
-    @property
-    def switch_selected(self):
-        return self.__switch_selected
-
-    @switch_selected.setter
-    def switch_selected(self, value):
-        self.__switch_selected = value
