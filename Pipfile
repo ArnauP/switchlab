@@ -8,11 +8,9 @@ python_version = "3.6.5"
 
 [packages]
 "pyqt5" = "==5.11.2"
-pynput = "*"
+pynput = "==1.6.8"
 playsound = "*"
 sip = "*"
 
 [dev-packages]
 pyinstaller = "==3.4"
-"flake8" = "*"
-pycodestyle = "*"
