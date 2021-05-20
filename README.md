@@ -10,7 +10,7 @@ pipenv install --dev
 
 To run the program in the developement environment simply run:
 ```
-pipenv run python kb_simulator.py
+pipenv run python __main__.py
 ```
 
 ## Generate the executable
