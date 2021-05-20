@@ -23,7 +23,7 @@ class MainController(QObject):
         self.__mixer.init()
 
     def play_sfx(self, switch_id, key_type, key_action):
-        sound_path = get_path('{}{}/{}_{}.mp3'.format(PATH_SWITCH_SFX, switch_id, key_type, key_action))
+        sound_path = get_path('{}{}/{}/{}.mp3'.format(PATH_SWITCH_SFX, switch_id, key_action, key_type))
         self.__mixer.music.load(sound_path)
         self.__mixer.music.play()
 
