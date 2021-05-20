@@ -1,7 +1,10 @@
 rm -r ../build/
 rm -r ../dist/
 cd ..
-pipenv run pyinstaller ./kb_simulator.spec --onefile
-cp -r ../resources ./dist
-mkdir ./scripts/Output
-pipenv run python -m zipfile -c ./scripts/Output/kb_simulator.zip ./dist/kb_simulator.exe ./dist/resources
+pipenv run pyinstaller ./__main__.spec
+cp -r temp/PyQt5/ dist/kbss/PyQt5/
+cp -r temp/pynput/ dist/kbss/pynput/
+cp -r temp/pygame/ dist/kbss/pygame/
+cd scripts/
+rm -r ./Output/
+iscc ./inno_setup.iss
