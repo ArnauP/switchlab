@@ -1,9 +1,17 @@
 SWITCHES = {
-    'Novelkeys Cream': 'novelkeys_cream',
-    'Holy Pandas': 'holy_pandas',
-    'Cherry MX Blues': 'cherry_mx_blues',
-    'Cherry MX Blacks': 'cherry_mx_blacks',
-    'Cherry MX Browns': 'cherry_mx_browns'
+    'Novelkey Cream': 'novelkeys_cream',
+    'Holy Panda': 'holy_pandas',
+    'Cherry MX Blue': 'cherry_mx_blues',
+    'Cherry MX Black': 'cherry_mx_blacks',
+    'Cherry MX Brown': 'cherry_mx_browns',
+    'Alpaca': 'alpaca',
+    'Gateron Black Ink': 'black_ink',
+    'Gateron Red Ink': 'red_ink',
+    'SKCM Blue Alps': 'blue_alps',
+    'Kalih Box Navy': 'box_navy',
+    'Buckling spring': 'buckling',
+    'Topre': 'topre',
+    'Turquoise Tealios': 'turquoise'
 }
 
 SWITCH_HEIGHT = 200
