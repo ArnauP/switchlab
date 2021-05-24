@@ -6,6 +6,7 @@ def get_path(path):
     base_path = os.getcwd()
     return os.path.join(base_path, path)
 
+
 def load_style_sheet(stylesheet, obj):
     file = QFile(stylesheet)
     file.open(QFile.ReadOnly)

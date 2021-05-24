@@ -1,5 +1,4 @@
-from PyQt5.QtCore import pyqtSignal, QObject
-from PyQt5.QtMultimedia import QSound
+from PyQt5.QtCore import QObject
 from pynput.keyboard import Key, Listener
 from ..views.main_view import MainView
 from ..utils.utils import *
@@ -45,7 +44,7 @@ class MainController(QObject):
             key = FILE_NAME_SPACE
         elif key == Key.enter:
             key = FILE_NAME_ENTER
-        elif key == Key.backspace or key == Key.tab:
+        elif key in [Key.backspace, Key.tab]:
             key = FILE_NAME_BACKSPACE
         else:
             key = FILE_NAME_ALPHANUMERIC
