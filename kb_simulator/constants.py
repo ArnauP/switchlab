@@ -8,8 +8,7 @@ SWITCHES = {
     'Gateron Black Ink': 'black_ink',
     'Gateron Red Ink': 'red_ink',
     'SKCM Blue Alps': 'blue_alps',
-    'Kalih Box Navy': 'box_navy',
-    'Buckling spring': 'buckling',
+    'Kailh Box Navy': 'box_navy',
     'Topre': 'topre',
     'Turquoise Tealios': 'turquoise'
 }
