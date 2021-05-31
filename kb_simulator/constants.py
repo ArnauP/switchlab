@@ -1,4 +1,5 @@
 APP_VERSION = '1.0.0'
+APP_NAME = 'KB Switch Sim'
 
 SWITCHES = {
     'Novelkey Cream': 'novelkeys_cream',

@@ -15,7 +15,7 @@ class MainView(QMainWindow):
         self.__ctrl.current_key_pressed = self.switch_selector.itemText(0)
 
     def build_ui(self):
-        self.setWindowTitle('KB Switch Simulator {}'.format(APP_VERSION))
+        self.setWindowTitle('{} {}'.format(APP_NAME, APP_VERSION))
         self.setFixedSize(350, 350)
 
         # Init widgets
