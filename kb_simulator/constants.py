@@ -1,3 +1,5 @@
+APP_VERSION = '1.0.0'
+
 SWITCHES = {
     'Novelkey Cream': 'novelkeys_cream',
     'Holy Panda': 'holy_pandas',

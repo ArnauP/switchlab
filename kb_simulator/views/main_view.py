@@ -15,8 +15,8 @@ class MainView(QMainWindow):
         self.__ctrl.current_key_pressed = self.switch_selector.itemText(0)
 
     def build_ui(self):
-        self.setWindowTitle('KB Switch Simulator')
-        self.setFixedSize(300, 300)
+        self.setWindowTitle('KB Switch Simulator {}'.format(APP_VERSION))
+        self.setFixedSize(350, 350)
 
         # Init widgets
         self.main_widget = QWidget()
@@ -49,6 +49,7 @@ class MainView(QMainWindow):
         # Init tray icon
         self.tray_icon = QSystemTrayIcon(self)
         self.tray_icon.setIcon(QIcon(get_path(PATH_ICON)))
+        self.tray_icon.activated.connect(self.sys_tray_activation)
         
         # Tray actions
         show_action = QAction("Show", self)
@@ -56,7 +57,7 @@ class MainView(QMainWindow):
         hide_action = QAction("Hide", self)
         show_action.triggered.connect(self.show)
         hide_action.triggered.connect(self.hide)
-        quit_action.triggered.connect(qApp.quit)
+        quit_action.triggered.connect(self.close_app)
 
         # Tray menu
         tray_menu = QMenu()
@@ -67,6 +68,16 @@ class MainView(QMainWindow):
         self.tray_icon.show()
 
         self.show()
+
+    def close_app(self):
+        self.tray_icon.hide()
+        qApp.quit()
+
+    def sys_tray_activation(self, reason):
+        if reason == QSystemTrayIcon.DoubleClick:
+            self.show()
+        elif reason == QSystemTrayIcon.MiddleClick:
+            self.hide()
     
     def selection_change(self, index):
         new_switch_name = self.switch_selector.itemText(index)
