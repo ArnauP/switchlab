@@ -1,14 +1,30 @@
+APP_VERSION = '1.0.0'
+APP_NAME = 'KB Switch Sim'
+
 SWITCHES = {
-    'Novelkeys Cream': 'novelkeys_cream',
-    'Holy Pandas': 'holy_pandas',
-    'Cherry MX Blues': 'cherry_mx_blues',
-    'Cherry MX Blacks': 'cherry_mx_blacks',
-    'Cherry MX Browns': 'cherry_mx_browns'
+    'Novelkey Cream': 'novelkeys_cream',
+    'Holy Panda': 'holy_pandas',
+    'Cherry MX Blue': 'cherry_mx_blues',
+    'Cherry MX Black': 'cherry_mx_blacks',
+    'Cherry MX Brown': 'cherry_mx_browns',
+    'Alpaca': 'alpaca',
+    'Gateron Black Ink': 'black_ink',
+    'Gateron Red Ink': 'red_ink',
+    'SKCM Blue Alps': 'blue_alps',
+    'Kailh Box Navy': 'box_navy',
+    'Topre': 'topre',
+    'Turquoise Tealios': 'turquoise'
 }
 
 SWITCH_HEIGHT = 200
 SWITCH_WIDTH = 200
 
-PATH_SWITCH_SFX = 'kb_simulator/resources/switches/'
-PATH_ICON = 'kb_simulator/resources/icons/app_icon.png'
-PATH_STYLE = 'kb_simulator/resources/style/style.css'
+FILE_NAME_ALPHANUMERIC = 'generic'
+FILE_NAME_ENTER = 'enter'
+FILE_NAME_BACKSPACE = 'backspace'
+FILE_NAME_SPACE = 'space'
+
+PATH_SWITCH_IMG = 'resources/switches/'
+PATH_SWITCH_SFX = 'resources/sfx/'
+PATH_ICON = 'resources/icons/app_icon.png'
+PATH_STYLE = 'resources/style/style.css'

@@ -7,12 +7,10 @@ verify_ssl = true
 python_version = "3.6.5"
 
 [packages]
-numpy = "==1.17.2"
 "pyqt5" = "==5.11.2"
-pynput = "*"
-playsound = "*"
+pynput = "==1.6.8"
+pygame
+sip = "*"
 
 [dev-packages]
 pyinstaller = "==3.4"
-"flake8" = "*"
-pycodestyle = "*"

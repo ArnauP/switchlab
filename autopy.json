@@ -1,0 +1,113 @@
+{
+ "version": "auto-py-to-exe-configuration_v1",
+ "pyinstallerOptions": [
+  {
+   "optionDest": "noconfirm",
+   "value": true
+  },
+  {
+   "optionDest": "filenames",
+   "value": "C:/GitProjects/kb-simulator/__main__.py"
+  },
+  {
+   "optionDest": "onefile",
+   "value": false
+  },
+  {
+   "optionDest": "console",
+   "value": false
+  },
+  {
+   "optionDest": "icon_file",
+   "value": "C:/GitProjects/kb-simulator/resources/icons/app_icon.ico"
+  },
+  {
+   "optionDest": "name",
+   "value": "kbss"
+  },
+  {
+   "optionDest": "ascii",
+   "value": false
+  },
+  {
+   "optionDest": "clean_build",
+   "value": false
+  },
+  {
+   "optionDest": "strip",
+   "value": false
+  },
+  {
+   "optionDest": "noupx",
+   "value": false
+  },
+  {
+   "optionDest": "uac_admin",
+   "value": false
+  },
+  {
+   "optionDest": "uac_uiaccess",
+   "value": false
+  },
+  {
+   "optionDest": "win_private_assemblies",
+   "value": false
+  },
+  {
+   "optionDest": "win_no_prefer_redirects",
+   "value": false
+  },
+  {
+   "optionDest": "bootloader_ignore_signals",
+   "value": false
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/GitProjects/kb-simulator/resources;resources/"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "PyQt5.sip"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "PyQt5"
+  },
+  {
+   "optionDest": "collect_submodules",
+   "value": "PyQt5"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "six"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "queue"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "ctypes"
+  },
+  {
+   "optionDest": "hiddenimports",
+   "value": "ctypes.wintypes"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/arnau.plans/.virtualenvs/kb-simulator-VMb6eZQh/Lib/site-packages/pygame;pygame/"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/arnau.plans/.virtualenvs/kb-simulator-VMb6eZQh/Lib/site-packages/PyQt5;PyQt5/"
+  },
+  {
+   "optionDest": "datas",
+   "value": "C:/Users/arnau.plans/.virtualenvs/kb-simulator-VMb6eZQh/Lib/site-packages/pynput;pynput/"
+  }
+ ],
+ "nonPyinstallerOptions": {
+  "increaseRecursionLimit": true,
+  "manualArguments": ""
+ }
+}
