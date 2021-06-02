@@ -1,0 +1,177 @@
+<RCC>
+    <qresource prefix="/">
+        <!-- App style -->
+        <file>style/style.css</file>
+
+        <!-- Icons -->
+        <file>icons/app_icon.ico</file>
+        <file>icons/app_icon.png</file>
+        <file>icons/app_icon.icns</file>
+        <file>icons/down_arrow.png</file>
+        <file>icons/down_arrow_disabled.png</file>
+        <file>icons/left_arrow.png</file>
+        <file>icons/left_arrow_disabled.png</file>
+        <file>icons/right_arrow.png</file>
+        <file>icons/right_arrow_disabled.png</file>
+        <file>icons/up_arrow.png</file>
+        <file>icons/up_arrow_disabled.png</file>
+
+        <!-- SFX -->
+        <!-- Alpaca -->
+        <file>sfx/alpaca/press/backspace.mp3</file>
+        <file>sfx/alpaca/press/enter.mp3</file>
+        <file>sfx/alpaca/press/generic.mp3</file>
+        <file>sfx/alpaca/press/space.mp3</file>
+
+        <file>sfx/alpaca/release/backspace.mp3</file>
+        <file>sfx/alpaca/release/enter.mp3</file>
+        <file>sfx/alpaca/release/generic.mp3</file>
+        <file>sfx/alpaca/release/space.mp3</file>
+
+        <!-- Black Ink -->
+        <file>sfx/black_ink/press/backspace.mp3</file>
+        <file>sfx/black_ink/press/enter.mp3</file>
+        <file>sfx/black_ink/press/generic.mp3</file>
+        <file>sfx/black_ink/press/space.mp3</file>
+
+        <file>sfx/black_ink/release/backspace.mp3</file>
+        <file>sfx/black_ink/release/enter.mp3</file>
+        <file>sfx/black_ink/release/generic.mp3</file>
+        <file>sfx/black_ink/release/space.mp3</file>
+
+        <!-- Blue Alps -->
+        <file>sfx/blue_alps/press/backspace.mp3</file>
+        <file>sfx/blue_alps/press/enter.mp3</file>
+        <file>sfx/blue_alps/press/generic.mp3</file>
+        <file>sfx/blue_alps/press/space.mp3</file>
+
+        <file>sfx/blue_alps/release/backspace.mp3</file>
+        <file>sfx/blue_alps/release/enter.mp3</file>
+        <file>sfx/blue_alps/release/generic.mp3</file>
+        <file>sfx/blue_alps/release/space.mp3</file>
+
+        <!-- Box Navy -->
+        <file>sfx/box_navy/press/backspace.mp3</file>
+        <file>sfx/box_navy/press/enter.mp3</file>
+        <file>sfx/box_navy/press/generic.mp3</file>
+        <file>sfx/box_navy/press/space.mp3</file>
+
+        <file>sfx/box_navy/release/backspace.mp3</file>
+        <file>sfx/box_navy/release/enter.mp3</file>
+        <file>sfx/box_navy/release/generic.mp3</file>
+        <file>sfx/box_navy/release/space.mp3</file>
+
+        <!-- Buckling -->
+        <file>sfx/buckling/press/backspace.mp3</file>
+        <file>sfx/buckling/press/enter.mp3</file>
+        <file>sfx/buckling/press/generic.mp3</file>
+        <file>sfx/buckling/press/space.mp3</file>
+
+        <file>sfx/buckling/release/backspace.mp3</file>
+        <file>sfx/buckling/release/enter.mp3</file>
+        <file>sfx/buckling/release/generic.mp3</file>
+        <file>sfx/buckling/release/space.mp3</file>
+
+        <!-- Cherry MX Blacks -->
+        <file>sfx/cherry_mx_blacks/press/backspace.mp3</file>
+        <file>sfx/cherry_mx_blacks/press/enter.mp3</file>
+        <file>sfx/cherry_mx_blacks/press/generic.mp3</file>
+        <file>sfx/cherry_mx_blacks/press/space.mp3</file>
+
+        <file>sfx/cherry_mx_blacks/release/backspace.mp3</file>
+        <file>sfx/cherry_mx_blacks/release/enter.mp3</file>
+        <file>sfx/cherry_mx_blacks/release/generic.mp3</file>
+        <file>sfx/cherry_mx_blacks/release/space.mp3</file>
+
+        <!-- Cherry MX Blues -->
+        <file>sfx/cherry_mx_blues/press/backspace.mp3</file>
+        <file>sfx/cherry_mx_blues/press/enter.mp3</file>
+        <file>sfx/cherry_mx_blues/press/generic.mp3</file>
+        <file>sfx/cherry_mx_blues/press/space.mp3</file>
+
+        <file>sfx/cherry_mx_blues/release/backspace.mp3</file>
+        <file>sfx/cherry_mx_blues/release/enter.mp3</file>
+        <file>sfx/cherry_mx_blues/release/generic.mp3</file>
+        <file>sfx/cherry_mx_blues/release/space.mp3</file>
+
+        <!-- Cherry MX Browns -->
+        <file>sfx/cherry_mx_browns/press/backspace.mp3</file>
+        <file>sfx/cherry_mx_browns/press/enter.mp3</file>
+        <file>sfx/cherry_mx_browns/press/generic.mp3</file>
+        <file>sfx/cherry_mx_browns/press/space.mp3</file>
+
+        <file>sfx/cherry_mx_browns/release/backspace.mp3</file>
+        <file>sfx/cherry_mx_browns/release/enter.mp3</file>
+        <file>sfx/cherry_mx_browns/release/generic.mp3</file>
+        <file>sfx/cherry_mx_browns/release/space.mp3</file>
+
+        <!-- Holy Pandas -->
+        <file>sfx/holy_pandas/press/backspace.mp3</file>
+        <file>sfx/holy_pandas/press/enter.mp3</file>
+        <file>sfx/holy_pandas/press/generic.mp3</file>
+        <file>sfx/holy_pandas/press/space.mp3</file>
+
+        <file>sfx/holy_pandas/release/backspace.mp3</file>
+        <file>sfx/holy_pandas/release/enter.mp3</file>
+        <file>sfx/holy_pandas/release/generic.mp3</file>
+        <file>sfx/holy_pandas/release/space.mp3</file>
+
+        <!-- Novelkeys cream -->
+        <file>sfx/novelkeys_cream/press/backspace.mp3</file>
+        <file>sfx/novelkeys_cream/press/enter.mp3</file>
+        <file>sfx/novelkeys_cream/press/generic.mp3</file>
+        <file>sfx/novelkeys_cream/press/space.mp3</file>
+
+        <file>sfx/novelkeys_cream/release/backspace.mp3</file>
+        <file>sfx/novelkeys_cream/release/enter.mp3</file>
+        <file>sfx/novelkeys_cream/release/generic.mp3</file>
+        <file>sfx/novelkeys_cream/release/space.mp3</file>
+
+        <!-- Red Ink -->
+        <file>sfx/red_ink/press/backspace.mp3</file>
+        <file>sfx/red_ink/press/enter.mp3</file>
+        <file>sfx/red_ink/press/generic.mp3</file>
+        <file>sfx/red_ink/press/space.mp3</file>
+
+        <file>sfx/red_ink/release/backspace.mp3</file>
+        <file>sfx/red_ink/release/enter.mp3</file>
+        <file>sfx/red_ink/release/generic.mp3</file>
+        <file>sfx/red_ink/release/space.mp3</file>
+
+        <!-- Topre -->
+        <file>sfx/topre/press/backspace.mp3</file>
+        <file>sfx/topre/press/enter.mp3</file>
+        <file>sfx/topre/press/generic.mp3</file>
+        <file>sfx/topre/press/space.mp3</file>
+
+        <file>sfx/topre/release/backspace.mp3</file>
+        <file>sfx/topre/release/enter.mp3</file>
+        <file>sfx/topre/release/generic.mp3</file>
+        <file>sfx/topre/release/space.mp3</file>
+
+        <!-- Topre -->
+        <file>sfx/turquoise/press/backspace.mp3</file>
+        <file>sfx/turquoise/press/enter.mp3</file>
+        <file>sfx/turquoise/press/generic.mp3</file>
+        <file>sfx/turquoise/press/space.mp3</file>
+
+        <file>sfx/turquoise/release/backspace.mp3</file>
+        <file>sfx/turquoise/release/enter.mp3</file>
+        <file>sfx/turquoise/release/generic.mp3</file>
+        <file>sfx/turquoise/release/space.mp3</file>
+
+        <!-- Switches -->
+        <file>switches/alpaca.png</file>
+        <file>switches/black_ink.png</file>
+        <file>switches/blue_alps.png</file>
+        <file>switches/box_navy.png</file>
+        <file>switches/cherry_mx_blacks.png</file>
+        <file>switches/cherry_mx_blues.png</file>
+        <file>switches/cherry_mx_browns.png</file>
+        <file>switches/holy_pandas.png</file>
+        <file>switches/novelkeys_cream.png</file>
+        <file>switches/red_ink.png</file>
+        <file>switches/topre.png</file>
+        <file>switches/turquoise.png</file>
+    </qresource>
+</RCC>

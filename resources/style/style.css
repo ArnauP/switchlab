@@ -78,13 +78,13 @@ QComboBox::drop-down
 
 QComboBox::down-arrow
 {
-    image: url(resources/icons/down_arrow_disabled.png);
+    image: url(:/icons/down_arrow_disabled.png);
 }
 
 QComboBox::down-arrow:on, QComboBox::down-arrow:hover,
 QComboBox::down-arrow:focus
 {
-    image: url(resources/icons/down_arrow.png);
+    image: url(:/icons/down_arrow.png);
 }
 
 QScrollBar
@@ -131,7 +131,7 @@ QScrollBar::add-line
 QScrollBar::add-line:horizontal
 {
     margin: 0px 3px 0px 3px;
-    border-image: url(resources/icons/right_arrow_disabled.png);
+    border-image: url(:/icons/right_arrow_disabled.png);
     subcontrol-position: right;
     subcontrol-origin: margin;
 }
@@ -139,19 +139,19 @@ QScrollBar::add-line:horizontal
 QScrollBar::add-line:vertical
 {
     margin: 3px 0px 3px 0px;
-    border-image: url(resources/icons/down_arrow_disabled.png);
+    border-image: url(:/icons/down_arrow_disabled.png);
     subcontrol-position: bottom;
     subcontrol-origin: margin;
 }
 
 QScrollBar::add-line:horizontal:hover, QScrollBar::add-line:horizontal:on
 {
-    border-image: url(resources/icons/right_arrow.png);
+    border-image: url(:/icons/right_arrow.png);
 }
 
 QScrollBar::add-line:vertical:hover, QScrollBar::add-line:vertical:on
 {
-    border-image: url(resources/icons/down_arrow.png);
+    border-image: url(:/icons/down_arrow.png);
 }
 
 QScrollBar::sub-line
@@ -163,7 +163,7 @@ QScrollBar::sub-line
 QScrollBar::sub-line:horizontal
 {
     margin: 0px 3px 0px 3px;
-    border-image: url(resources/icons/left_arrow_disabled.png);
+    border-image: url(:/icons/left_arrow_disabled.png);
     subcontrol-position: left;
     subcontrol-origin: margin;
 }
@@ -171,14 +171,14 @@ QScrollBar::sub-line:horizontal
 QScrollBar::sub-line:vertical
 {
     margin: 3px 0px 3px 0px;
-    border-image: url(resources/icons/up_arrow_disabled.png);
+    border-image: url(:/icons/up_arrow_disabled.png);
     subcontrol-position: top;
     subcontrol-origin: margin;
 }
 
 QScrollBar::sub-line:horizontal:hover, QScrollBar::sub-line:horizontal:on
 {
-    border-image: url(resources/icons/left_arrow.png);
+    border-image: url(:/icons/left_arrow.png);
     width: 10px;
     height: 10px;
     subcontrol-position: left;
@@ -187,7 +187,7 @@ QScrollBar::sub-line:horizontal:hover, QScrollBar::sub-line:horizontal:on
 
 QScrollBar::sub-line:vertical:hover, QScrollBar::sub-line:vertical:on
 {
-    border-image: url(resources/icons/up_arrow.png);
+    border-image: url(:/icons/up_arrow.png);
 }
 
 QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal,

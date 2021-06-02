@@ -1,14 +1,14 @@
 [Setup]
-AppName=KB Switch simulator
-AppVersion=1.0.0
-AppPublisher=ArnauP
-DefaultDirName={pf}\KBSS
+AppName=SwitchLab
+AppVersion=0.3.0
+AppPublisher=Arnau Plans
+DefaultDirName={pf}\SwitchLab
 DisableProgramGroupPage=yes
-OutputBaseFilename=KB Switch Simulator 1.0.0
+OutputBaseFilename=SwitchLab 0.3.0
 Compression=lzma
 SolidCompression=yes
 LicenseFile=license.rtf
-UninstallDisplayIcon={app}\kbss\kbss.exe
+UninstallDisplayIcon={app}\switchlab.exe
 UsePreviousAppDir=yes
 
 [Dirs]
@@ -24,16 +24,16 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Source: "..\dist\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Permissions: everyone-full
 
 [Icons]
-Name: "{commonprograms}\KB Switch Simulator 1.0.0"; Filename: "{app}\kbss\kbss.exe"
-Name: "{commondesktop}\KB Switch Simulator 1.0.0"; Filename: "{app}\kbss\kbss.exe"; Tasks: desktopicon
+Name: "{commonprograms}\SwitchLab 0.3.0"; Filename: "{app}\switchlab.exe"
+Name: "{commondesktop}\SwitchLab 0.3.0"; Filename: "{app}\switchlab.exe"; Tasks: desktopicon
 
 
 [InstallDelete]
-Type: files; Name: "{commonprograms}\KB Switch Simulator*.lnk"
-Type: files; Name: "{commondesktop}\KB Switch Simulator*.lnk"
+Type: files; Name: "{commonprograms}\SwitchLab*.lnk"
+Type: files; Name: "{commondesktop}\SwitchLab*.lnk"
 
 [Run]
-Filename: "{app}\kbss\kbss.exe"; Description: "{cm:LaunchProgram,KB Switch Simulator}"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\switchlab.exe"; Description: "{cm:LaunchProgram,SwitchLab}"; Flags: nowait postinstall skipifsilent
 
 [Code]
 // Utility functions for Inno Setup
