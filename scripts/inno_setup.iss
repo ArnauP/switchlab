@@ -1,10 +1,10 @@
 [Setup]
 AppName=SwitchLab
-AppVersion=0.3.0
+AppVersion=0.3.1
 AppPublisher=Arnau Plans
 DefaultDirName={pf}\SwitchLab
 DisableProgramGroupPage=yes
-OutputBaseFilename=SwitchLab 0.3.0
+OutputBaseFilename=SwitchLab 0.3.1
 Compression=lzma
 SolidCompression=yes
 LicenseFile=license.rtf
@@ -21,11 +21,11 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "..\dist\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Permissions: everyone-full
+Source: "..\dist\switchlab\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Permissions: everyone-full
 
 [Icons]
-Name: "{commonprograms}\SwitchLab 0.3.0"; Filename: "{app}\switchlab.exe"
-Name: "{commondesktop}\SwitchLab 0.3.0"; Filename: "{app}\switchlab.exe"; Tasks: desktopicon
+Name: "{commonprograms}\SwitchLab 0.3.1"; Filename: "{app}\switchlab.exe"
+Name: "{commondesktop}\SwitchLab 0.3.1"; Filename: "{app}\switchlab.exe"; Tasks: desktopicon
 
 
 [InstallDelete]
