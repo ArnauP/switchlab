@@ -6,6 +6,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*_rc.py
 
 # Distribution / packaging
 .Python
@@ -28,7 +29,6 @@ share/python-wheels/
 *.egg
 MANIFEST
 .DS_Store
-*_rc.py
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
