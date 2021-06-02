@@ -2,8 +2,8 @@ from PyQt5.QtWidgets import QVBoxLayout, QWidget, QComboBox, QLabel, QMainWindow
 from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5.QtCore import QSize, Qt
 
+from .. import __version__
 from ..constants import *
-from ..utils.utils import *
 
 
 class MainView(QMainWindow):
@@ -15,7 +15,7 @@ class MainView(QMainWindow):
         self.__ctrl.current_key_pressed = self.switch_selector.itemText(0)
 
     def build_ui(self):
-        self.setWindowTitle('{} {}'.format(APP_NAME, APP_VERSION))
+        self.setWindowTitle('{} {}'.format(APP_NAME, __version__))
         self.setFixedSize(350, 350)
 
         # Init widgets
@@ -28,10 +28,10 @@ class MainView(QMainWindow):
         for switch_name in SWITCHES.keys():
             self.switch_selector.addItem(switch_name)
         
-        img_path = get_path('{}{}.png'.format(
+        img_path = '{}{}.png'.format(
             PATH_SWITCH_IMG,
             SWITCHES[self.switch_selector.itemText(0)]
-            ))
+        )
         self.img_container = QLabel(self.main_widget)
         img = QPixmap(img_path)
         self.img_container.setPixmap(img.scaled(QSize(SWITCH_HEIGHT, SWITCH_WIDTH)))
@@ -48,7 +48,7 @@ class MainView(QMainWindow):
 
         # Init tray icon
         self.tray_icon = QSystemTrayIcon(self)
-        self.tray_icon.setIcon(QIcon(get_path(PATH_ICON)))
+        self.tray_icon.setIcon(QIcon(PATH_ICON))
         self.tray_icon.activated.connect(self.sys_tray_activation)
         
         # Tray actions
@@ -81,10 +81,10 @@ class MainView(QMainWindow):
     
     def selection_change(self, index):
         new_switch_name = self.switch_selector.itemText(index)
-        img_path = get_path('{}{}.png'.format(
+        img_path = '{}{}.png'.format(
             PATH_SWITCH_IMG,
             SWITCHES[new_switch_name]
-            ))
+            )
         img = QPixmap(img_path)
         self.img_container.setPixmap(img.scaled(QSize(SWITCH_HEIGHT, SWITCH_WIDTH)))
         self.__ctrl.change_switch_selected(SWITCHES[new_switch_name])
@@ -93,7 +93,7 @@ class MainView(QMainWindow):
         event.ignore()
         self.hide()
         self.tray_icon.showMessage(
-            "KB Switch Simulator",
+            APP_NAME,
             "Application was minimized to Tray",
             QSystemTrayIcon.Information,
             2000

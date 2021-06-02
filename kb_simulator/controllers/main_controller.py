@@ -22,7 +22,8 @@ class MainController(QObject):
         self.__mixer.init()
 
     def play_sfx(self, switch_id, key_type, key_action):
-        sound_path = get_path('{}{}/{}/{}.mp3'.format(PATH_SWITCH_SFX, switch_id, key_action, key_type))
+        sound_path = get_path('{}{}/{}/{}{}'.format(PATH_SWITCH_SFX, switch_id,
+                                                    key_action, key_type, FILE_EXTENSION_SFX))
         self.__mixer.music.load(sound_path)
         self.__mixer.music.play()
 
@@ -38,8 +39,23 @@ class MainController(QObject):
     def start_listener(self):
         self.listener = Listener(on_press=self.on_press, on_release=self.on_release)
         self.listener.start()
-    
-    def get_key_type(self, key):
+
+    def on_press(self, key):
+        if self.__key_pressed == key:
+            return
+        self.__key_pressed = key
+        key_type = self.get_key_type(key)
+        play_audio_thread = Thread(target=lambda: self.play_sfx(self.switch_selected, key_type, KEY_ACTION_PRESS))
+        play_audio_thread.start()
+
+    def on_release(self, key):
+        self.__key_pressed = None
+        key_type = self.get_key_type(key)
+        play_audio_thread = Thread(target=lambda: self.play_sfx(self.switch_selected, key_type, KEY_ACTION_RELEASE))
+        play_audio_thread.start()
+
+    @staticmethod
+    def get_key_type(key):
         if key == Key.space:
             key = FILE_NAME_SPACE
         elif key == Key.enter:
@@ -49,17 +65,3 @@ class MainController(QObject):
         else:
             key = FILE_NAME_ALPHANUMERIC
         return key
-
-    def on_press(self, key):
-        if self.__key_pressed == key:
-            return
-        self.__key_pressed = key
-        key_type = self.get_key_type(key)
-        play_audio_thread = Thread(target=lambda: self.play_sfx(self.switch_selected, key_type, 'press'))
-        play_audio_thread.start()
-
-    def on_release(self, key):
-        self.__key_pressed = None
-        key_type = self.get_key_type(key)
-        play_audio_thread = Thread(target=lambda: self.play_sfx(self.switch_selected, key_type, 'release'))
-        play_audio_thread.start()

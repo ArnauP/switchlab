@@ -1,7 +1,8 @@
 rm -r ../build/
 rm -r ../dist/
 cd ..
-pipenv run pyinstaller ./__main__.spec
+python -m pipenv run python ./setup.py build_ui
+python -m pipenv run python ./setup.py bdist_app
 cp -r temp/PyQt5/ dist/kbss/PyQt5/
 cp -r temp/pynput/ dist/kbss/pynput/
 cp -r temp/pygame/ dist/kbss/pygame/

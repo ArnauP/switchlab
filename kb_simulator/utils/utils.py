@@ -1,9 +1,14 @@
 from PyQt5.QtCore import QFile, QTextStream
 import os
+import sys
 
 
 def get_path(path):
-    base_path = os.getcwd()
+    if getattr(sys, 'frozen', False):
+        base_path = sys._MEIPASS
+    else:
+        base_path = os.path.abspath('.')
+
     return os.path.join(base_path, path)
 
 
