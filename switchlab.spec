@@ -17,7 +17,7 @@ pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
 exe = EXE(pyz,
           a.scripts,
           exclude_binaries=True,
-          name='kbss',
+          name='switchlab',
           debug=False,
           strip=False,
           upx=True,
@@ -30,9 +30,9 @@ coll = COLLECT(exe,
                a.datas,
                strip=False,
                upx=True,
-               name='kbss')
+               name='switchlab')
 
 app = BUNDLE(coll,
-             name='kbss.app',
+             name='switchlab.app',
              icon='resources/icons/app_icon.icns',
              bundle_identifier=None)
