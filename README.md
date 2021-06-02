@@ -1,16 +1,16 @@
-# Keyboard Switch Simulator
+# SwitchLab
 
-This piece of software resembles the sounds of different types of switches. The aim of this is to allow any keyboard enthusiast to have a feeling of what it would sound like if they owned any of these available switches and evaluate if it's suitable after a while typing.
+This software resembles the sounds of different types of switches. The aim of this is to allow any keyboard enthusiast to have a feeling of what it would sound like if they owned any of these available switches and evaluate if it's suitable after a while typing.
 
 ## Developer notes
-First of all, set up the virutual environment with all the necessary packages.
+First of all, set up the virtual environment with all the necessary packages.
 ```
 pipenv install --dev
 ```
 
-To run the program in the developement environment simply run:
+To run the program in the development you need to run the python file `bin/switchlab` with the working directory as the current git directory: `switchlab`. Or try to run the following command:
 ```
-pipenv run python __main__.py
+pipenv run python -m switchlab
 ```
 
 ## Generate the executable
@@ -20,6 +20,6 @@ To generate the executable file run the `build_dist.sh`, located in the `scripts
 ./build_dist.sh
 ```
 
->  **Note:** Tested in windows 10.
+>  **Note:** Compatible with in Windows 10.
 
-After the scirpt is done the distributable file will be abailable in the `scripts/Output` folder as a **zip** file; `kb_simulator.zip`.
+After the script is done the distributable file will be available in the `scripts/Output` folder as an executable file(**.exe**) with the current version; `SwitchLab_X.X.X.exe`.
