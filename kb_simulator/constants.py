@@ -1,5 +1,4 @@
-APP_VERSION = '0.2.0'
-APP_NAME = 'KB Switch Sim'
+APP_NAME = 'SwitchLab'
 
 SWITCHES = {
     'Novelkey Cream': 'novelkeys_cream',
@@ -16,6 +15,11 @@ SWITCHES = {
     'Turquoise Tealios': 'turquoise'
 }
 
+FILE_EXTENSION_SFX = '.mp3'
+
+KEY_ACTION_PRESS = 'press'
+KEY_ACTION_RELEASE = 'release'
+
 SWITCH_HEIGHT = 200
 SWITCH_WIDTH = 200
 
@@ -24,7 +28,7 @@ FILE_NAME_ENTER = 'enter'
 FILE_NAME_BACKSPACE = 'backspace'
 FILE_NAME_SPACE = 'space'
 
-PATH_SWITCH_IMG = 'resources/switches/'
 PATH_SWITCH_SFX = 'resources/sfx/'
-PATH_ICON = 'resources/icons/app_icon.png'
-PATH_STYLE = 'resources/style/style.css'
+PATH_SWITCH_IMG = ':/switches/'
+PATH_ICON = ':/icons/app_icon.png'
+PATH_STYLE = ':/style/style.css'
