@@ -17,38 +17,24 @@ class MainView(QMainWindow):
         self.__ctrl.current_key_pressed = self.switch_selector.itemText(0)
 
     def action_clicked_home(self):
-        print('home')
-        self.frame_page.setStyleSheet(
-            """
-            background-color: white;
-            """
-        )
         self.page_home.show()
         self.page_switches.hide()
         self.page_settings.hide()
         self.page_about.hide()
 
     def action_clicked_switches(self):
-        print('Switches')
-        self.frame_page.setStyleSheet(
-            """
-            background-color: green;
-            """
-        )
         self.page_home.hide()
         self.page_switches.show()
         self.page_settings.hide()
         self.page_about.hide()
 
     def action_clicked_settings(self):
-        print('Settings')
         self.page_home.hide()
         self.page_switches.hide()
         self.page_settings.show()
         self.page_about.hide()
 
     def action_clicked_about(self):
-        print('About')
         self.page_home.hide()
         self.page_switches.hide()
         self.page_settings.hide()
@@ -57,9 +43,80 @@ class MainView(QMainWindow):
     def init_page_home(self):
         frame = QFrame()
         lyt_frame = QVBoxLayout()
+        lyt_frame.setAlignment(Qt.AlignCenter)
 
-        label = QLabel('Welcome!')
-        lyt_frame.addWidget(label)
+        # Row 1
+        frame_row_1 = QFrame()
+        frame_row_1.setFixedHeight(200)
+        lyt_row_1 = QHBoxLayout()
+        lyt_row_1.setAlignment(Qt.AlignCenter)
+        lbl_title = QLabel(APP_NAME)
+        img_container = QLabel()
+        img = QPixmap(PATH_ICON)
+        img_container.setPixmap(img.scaled(QSize(50, 50)))
+        lyt_row_1.addWidget(lbl_title)
+        lyt_row_1.addWidget(img_container)
+        frame_row_1.setLayout(lyt_row_1)
+        spc_vertical_exp = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Expanding)
+
+        # Row 2
+        frame_row_2 = QFrame()
+        lyt_row_2 = QHBoxLayout()
+        lyt_row_2.setAlignment(Qt.AlignCenter)
+        frame_row_2.setLayout(lyt_row_2)
+
+        frame_switch = QFrame()
+        frame_switch.setFixedSize(200, 180)
+        frame_switch.setStyleSheet(
+            """
+            QFrame {
+                border: 1px solid #EDEDED;
+                border-radius: 5px;
+            }
+            QLabel {
+                border: 0px;
+            }
+            """
+        )
+        lyt_switch = QHBoxLayout()
+        lyt_switch.setAlignment(Qt.AlignCenter)
+        img_container = QLabel()
+        img = QPixmap(PATH_ICON)
+        img_container.setPixmap(img.scaled(QSize(150, 150)))
+        lyt_switch.addWidget(img_container)
+        frame_switch.setLayout(lyt_switch)
+
+        # Info frame
+        frame_info = QFrame()
+        frame_info.setFixedSize(200, 180)
+        frame_info.setStyleSheet(
+            """
+            QFrame {
+                border: 1px solid #EDEDED;
+                border-radius: 5px;
+            }
+            QLabel {
+                border: 0px;
+            }
+            """
+        )
+        lyt_info = QVBoxLayout()
+        lyt_info.setAlignment(Qt.AlignLeft)
+        lbl_info_1 = QLabel('Switch name')
+        lbl_info_2 = QLabel('Switch info')
+        lbl_info_3 = QLabel('Switch info')
+        lyt_info.addWidget(lbl_info_1)
+        lyt_info.addWidget(lbl_info_2)
+        lyt_info.addWidget(lbl_info_3)
+        frame_info.setLayout(lyt_info)
+
+        lyt_row_2.addWidget(frame_switch)
+        lyt_row_2.addWidget(frame_info)
+
+        # Add sub-frames to main frame
+        lyt_frame.addWidget(frame_row_1)
+        lyt_frame.addWidget(frame_row_2)
+        lyt_frame.addSpacerItem(spc_vertical_exp)
         frame.setLayout(lyt_frame)
 
         return frame
@@ -114,7 +171,7 @@ class MainView(QMainWindow):
         self.frame_menu_bar = QFrame()
         self.frame_menu_bar.setStyleSheet(
             """
-            background-color: grey;
+            background-color: #EDEDED;
             """
         )
         self.frame_menu_bar.setFixedSize(SIZE_WINDOW_WIDTH / 5.4, SIZE_WINDOW_HEIGHT)
@@ -145,20 +202,19 @@ class MainView(QMainWindow):
         lyt_page = QVBoxLayout()
         lyt_page.setAlignment(Qt.AlignCenter)
 
+        self.page_switches = self.init_page_switches()
+        lyt_page.addWidget(self.page_switches)
+
         self.page_home = self.init_page_home()
         lyt_page.addWidget(self.page_home)
 
-        self.page_switches = self.init_page_switches()
-        lyt_page.addWidget(self.page_switches)
-        self.page_switches.hide()
-
         self.page_settings = self.init_page_settings()
         lyt_page.addWidget(self.page_settings)
-        self.page_settings.hide()
 
         self.page_about = self.init_page_about()
         lyt_page.addWidget(self.page_about)
-        self.page_about.hide()
+
+        self.action_clicked_home()
 
         self.frame_page.setLayout(lyt_page)
 
@@ -170,7 +226,7 @@ class MainView(QMainWindow):
         self.main_widget = QWidget()
         self.main_widget.setStyleSheet(
             """
-            background-color: grey;
+            background-color: white;
             """
         )
 
